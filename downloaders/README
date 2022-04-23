@@ -1,0 +1,12 @@
+Downloaders for Scopus, Web of Science, ELibrary (РИНЦ).
+(Downloader for Google Scholar is partially implemented but there are some complications, so better to get citation data manually for that case)
+
+They save data to either TXT or CSV files, this can be changed fairly easily.
+
+To adjust them for your use-case, just edit corresponding ID to your author ID
+(at the start of the script)
+
+The scripts require selenium, install it with pip (`pip install selenium` or `pip install --user selenium`)
+or use the attached `00_download_selenium.sh` script to put the module in a local directory.
+(it will also download geckodriver to use automated firefox)
+

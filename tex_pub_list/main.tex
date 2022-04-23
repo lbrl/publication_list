@@ -1,0 +1,153 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+%koi8-r]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% \usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[colorlinks=true, linkcolor=Maroon]{hyperref}
+
+\newcommand*{\mc}{}
+\def\mc#1#{\mathcoloraux{#1}}
+\newcommand*{\mathcoloraux}[3]{%
+  \protect\leavevmode
+  \begingroup
+    \color#1{#2}#3%
+  \endgroup
+}
+
+\usepackage{float} % Required for specifying the exact location of a figure or table
+
+\usepackage{placeins}
+
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{subcaption}
+
+\usepackage{textcomp}
+\usepackage[version=3]{mhchem}
+% \usepackage{translator}
+
+% \usepackage{cleveref}
+
+\newcommand{\fref}[1]{Рис.~\ref{#1}}
+\newcommand{\tref}[1]{Таб.~\ref{#1}}
+\newcommand{\eref}[1]{(\ref{#1})}
+
+
+\usepackage{icomma}
+\usepackage[separate-uncertainty = true,
+multi-part-units=single,
+range-phrase=--,
+range-units=single,
+per-mode = symbol,
+output-decimal-marker={,}]{siunitx}
+\input{siunitx_ru.tex}
+\DeclareSIUnit\Nr{\textup{Н}}
+\DeclareSIUnit\kNr{\textup{кН}}
+\DeclareSIUnit\mmrtst{\textup{мм.\,рт.\,ст.}}
+
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+
+\usepackage{multicol}
+
+% \topmargin -20 mm
+% \oddsidemargin 5 mm
+% \textheight 250 mm
+% \textwidth 160 mm
+ 
+ 
+\usepackage[height=25cm, a4paper, hmargin={1.35cm, 1.35cm}, vmargin={1.35cm, 1.35cm}]{geometry}
+\usepackage{listings}
+
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+
+\usepackage{longtable}
+\usepackage{tabularx}
+
+\title{Публикации}
+
+\author{}
+
+\date{\today}
+
+\begin{document}
+
+\begin{center}
+    \textbf{СПИСОК}\\
+    \textbf{опубликованных и приравненных к ним}\\
+    \textbf{научных и учебно-методических работ}\\
+    \vspace{1em}
+    \textbf{ИВАНОВА ИВАНА ИВАНОВИЧА}
+\end{center}
+
+\begin{center}
+
+\begin{tabular}{|p{13mm}|p{34mm}|p{15mm}|p{35mm}|p{20mm}|p{29mm}|}
+\hline
+№ п/п & Наименование
+работы,  её вид,
+системы цитирования & Форма
+работы & Выходные
+данные & Объём
+в п.л. или 
+с. & Соавторы \\
+\hline
+1 & 2 & 3 & 4 & 5 & 6 \\
+\hline
+\end{tabular}
+
+\begin{flushleft}
+\textbf{а) научные работы:}
+\end{flushleft}
+
+\begin{longtable}{|p{13mm}|p{34mm}|p{15mm}|p{35mm}|p{20mm}|p{29mm}|}
+% \caption{A simple longtable example}\\
+\hline
+% № п/п & Наименование
+% работы,  её вид,
+% системы цитирования & Форма
+% работы & Выходные
+% данные & Объём
+% в п.л. или 
+% с. & Соавторы \\
+% \hline
+\endfirsthead
+% \multicolumn{4}{c}%
+% {\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+% \hline
+% \textbf{First entry} & \textbf{Second entry} & \textbf{Third entry} & \textbf{Fourth entry} \\
+\hline
+\endhead
+\hline
+% \multicolumn{4}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\input{table_body}
+\end{longtable}
+\end{center}
+
+\vspace{2em}
+
+\begin{tabularx}{.9\textwidth}{lXl}
+    Соискатель & & И. И. Иванов \\
+    & & \\
+    & & \\
+    \textbf{Список  верен:} & & \\
+    & & \\
+    & & \\
+    Ученый секретарь & & А. В. ---------- \\
+    & & \\
+    & & \\
+    & & (дата)
+\end{tabularx}
+
+\end{document}
